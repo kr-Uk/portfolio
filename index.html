@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>김민욱 · 백엔드 포트폴리오</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="김민욱 백엔드 개발자 포트폴리오 — Spring Boot · Java · PostgreSQL · Redis · Docker" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="김민욱 · 백엔드 포트폴리오" />
+<meta property="og:description" content="Spring Boot · Java · PostgreSQL · Redis 기반 백엔드 개발자 포트폴리오" />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #0a0c10;
+    --panel: #12151c;
+    --rule: #232833;
+    --text: #e7ecf3;
+    --muted: #9aa6b6;
+    --accent: #5b9dff;
+    --accent-2: #7bd88f;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Pretendard", system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- hero ---- */
+  header.hero {
+    padding: 80px 0 48px;
+    border-bottom: 1px solid var(--rule);
+    background:
+      radial-gradient(900px 360px at 80% -10%, rgba(91,157,255,.14), transparent 60%),
+      radial-gradient(700px 320px at 0% 0%, rgba(123,216,143,.08), transparent 60%);
+  }
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 14px;
+  }
+  h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.1; margin: 0 0 16px; font-weight: 800; }
+  .tagline { font-size: clamp(16px, 2.4vw, 19px); color: var(--muted); max-width: 640px; margin: 0 0 28px; }
+
+  .stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 32px; }
+  .chip {
+    font-family: "JetBrains Mono", monospace; font-size: 12.5px;
+    color: var(--muted); background: var(--panel);
+    border: 1px solid var(--rule); border-radius: 999px; padding: 6px 12px;
+  }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    padding: 12px 20px; border-radius: 12px; border: 1px solid transparent;
+    transition: transform .12s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: #07101f; }
+  .btn-primary:hover { background: #74acff; }
+  .btn-ghost { background: transparent; color: var(--text); border-color: var(--rule); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ---- pdf viewer ---- */
+  section.viewer { padding: 48px 0 24px; }
+  .viewer h2 {
+    font-family: "JetBrains Mono", monospace; font-size: 13px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted); margin: 0 0 16px;
+  }
+  .pdf-frame {
+    width: 100%; height: 86vh; min-height: 560px;
+    border: 1px solid var(--rule); border-radius: 16px; overflow: hidden;
+    background: #1b1f27;
+  }
+  .pdf-frame iframe { width: 100%; height: 100%; border: 0; }
+  .fallback {
+    display: grid; place-items: center; height: 100%; text-align: center; padding: 24px;
+    color: var(--muted);
+  }
+
+  /* ---- footer ---- */
+  footer {
+    padding: 40px 0 64px; margin-top: 24px;
+    border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Backend Developer · Portfolio</p>
+    <h1>김민욱 · 백엔드 포트폴리오</h1>
+    <p class="tagline">
+      Spring Boot 기반 백엔드 설계부터 배포까지. 위치 기반 소셜 매칭(ITTO),
+      AI 체형 분석 서비스(BONETOBE) 등 6개 프로젝트의 API 설계 · 인프라 · 모니터링을 다뤘습니다.
+    </p>
+    <div class="stack">
+      <span class="chip">Spring Boot</span>
+      <span class="chip">Java 17/21</span>
+      <span class="chip">PostgreSQL</span>
+      <span class="chip">Redis</span>
+      <span class="chip">JPA · QueryDSL</span>
+      <span class="chip">Docker</span>
+      <span class="chip">Grafana · Loki</span>
+      <span class="chip">AWS S3</span>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="portfolio-backend.pdf" download>⬇ PDF 다운로드</a>
+      <a class="btn btn-ghost" href="portfolio-backend.pdf" target="_blank" rel="noopener">새 탭에서 열기 ↗</a>
+      <a class="btn btn-ghost" href="https://github.com/kr-Uk" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</header>
+
+<section class="viewer">
+  <div class="wrap">
+    <h2>Portfolio Document</h2>
+    <div class="pdf-frame">
+      <iframe src="portfolio-backend.pdf#view=FitH" title="김민욱 백엔드 포트폴리오 PDF">
+        <div class="fallback">
+          브라우저에서 PDF를 표시할 수 없습니다.
+          <a href="portfolio-backend.pdf">여기서 다운로드</a>하세요.
+        </div>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 김민욱 · Backend Developer ·
+    <a href="https://github.com/kr-Uk">github.com/kr-Uk</a>
+  </div>
+</footer>
+
+</body>
+</html>
