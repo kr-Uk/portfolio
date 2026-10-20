@@ -18,8 +18,8 @@ Java와 Spring Boot를 중심으로 진행한 프로젝트의 설계, 구현, �
 ## 대표 프로젝트
 
 - [DotShelf](https://github.com/kr-Uk/dotshelf) — 멀티플랫폼 독서 기록·가상 책장 서비스
+- [Itto](https://github.com/kr-Uk/itto-backend) — 위치 기반 소셜 매칭 서비스
 - [Bone To Be](https://github.com/kr-Uk/bone-to-be) — AI 골격 인식 기반 의류 추천·가상 착용 서비스
-- [PizzaEatHo](https://github.com/kr-Uk/pizzaeatho) — 피자 주문·커스터마이징 모바일 앱
 
 ## 저장소 구성
 
